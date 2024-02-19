@@ -1,0 +1,53 @@
+.body {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../../assets/hero_Header.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: top;
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-size: 3.5rem;
+}
+
+
+
+.button2 {
+  color: var(--primaryColor);
+  border: 2px solid var(--primaryColor);
+  width: 250px;
+  border-radius: 0;
+  padding: 15px;
+}
+
+.button2:hover {
+  color: black;
+  background-color: var(--primaryColor);
+}
+
+
+.informationBlock{
+  transform: translateY(-25%)
+}
+
+.img {
+  height: 50px;
+  object-fit: contain;
+}
+
+.line {
+  height: 5px;
+  background-color: var(--secondaryColor);
+}
+
+@media screen and (max-width: 600px) {
+  .title {
+    font-size: 2rem;
+  }
+  .textBlock {
+    margin-top: 200px;
+  }
+}

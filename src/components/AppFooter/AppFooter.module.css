@@ -1,0 +1,26 @@
+.body{
+    background: linear-gradient(rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.3)), url("src/assets/HeroFooter.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+}
+
+.image{
+    height: 75px;
+    border-radius: 25%;
+}
+
+input{
+    border: none;
+    border-bottom: 2px solid grey;
+}
+
+textarea{
+    border: 2px solid grey;
+   padding-top: 10px;
+}
+
+textarea, input:focus{
+    outline: none;
+}
+

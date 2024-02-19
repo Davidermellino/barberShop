@@ -1,0 +1,35 @@
+.body{
+    margin: 150px 0 ;
+}
+
+.title{
+    margin-bottom: 100px;
+}
+
+.logo
+{
+    height: 50px;
+    object-fit: contain;
+}
+
+
+
+.profileContainer {
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    display: flex;
+    justify-content: center; /* Centra orizzontalmente */
+    align-items: center; /* Centra verticalmente */
+    overflow: hidden;
+    transform: translateY(-50%);
+
+  }
+  
+
+  .profile {
+    width: auto; /* Impostazione dell'ampiezza su auto per mantenere le proporzioni originali */
+    height: 100%; /* Impostazione dell'altezza al 100% per adattarsi al contenitore */
+    object-fit: cover; /* Per ridimensionare l'immagine in modo proporzionale all'interno del suo contenitore */
+    border-radius: 50%;
+  }

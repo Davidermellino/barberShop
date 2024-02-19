@@ -1,0 +1,49 @@
+@font-face {
+  font-family: "Barlow";
+  src: local("Barlow"),
+   url("src/fonts/Barlow-ExtraBold/barlow/Barlow-Bold.ttf") format("truetype");
+  font-weight: bold;
+ }
+
+  :root{
+    --primaryColor : rgb(245,243,236);
+    --secondaryColor : rgb(186,164,130);
+  }
+  
+  .tx-primary{
+    color: var(--primaryColor);
+  }
+  .tx-secondary{
+    color: var(--secondaryColor);
+  }
+  
+  .bg-primar{
+    background-color: var(--primaryColor);
+  }
+  
+  .bg-second{
+    background-color: var(--secondaryColor);
+  }
+  
+  *{
+    font-family: "Barlow";
+  }
+  
+  body{
+    background-color: var(--primaryColor);
+  
+  }
+
+  .button1 {
+    color: black;
+    background-color: var(--secondaryColor);
+    border-radius: 0;
+    padding: 15px;
+    border: 2px solid var(--secondaryColor);
+    width: 250px;
+  }
+  
+  .button1:hover {
+    color: var(--secondaryColor);
+    background: none;
+  }
