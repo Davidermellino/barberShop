@@ -22,7 +22,7 @@ function AppServices() {
           <div className="col-12 col-md-6">
             <div className="row my-5">
               <div className="col-4 d-flex justify-content-end p-4 align-items-start">
-                <img src="/public/Adulthaircutimg.png" alt="" />
+                <img src="/assets/Adulthaircutimg.png" alt="" />
               </div>
               <div className="col-8">
                 <div className="row">
@@ -42,7 +42,7 @@ function AppServices() {
           <div className="col-12 col-md-6">
             <div className="row my-5">
               <div className="col-4 d-flex justify-content-end p-4 align-items-start">
-                <img src="/public/Kidshaircutimg.png" alt="" />
+                <img src="/assets/Kidshaircutimg.png" alt="" />
               </div>
               <div className="col-8">
                 <div className="row">
@@ -64,7 +64,7 @@ function AppServices() {
           <div className="col-12 col-md-6">
             <div className="row my-5">
               <div className="col-4 d-flex justify-content-end p-4 align-items-start">
-                <img src="/public/Beardtrimimg.png" alt="" />
+                <img src="/assets/Beardtrimimg.png" alt="" />
               </div>
               <div className="col-8">
                 <div className="row">
@@ -84,7 +84,7 @@ function AppServices() {
           <div className="col-12 col-md-6">
             <div className="row my-5 ">
               <div className="col-4 d-flex justify-content-end p-4 align-items-start">
-                <img src="/public/Barbershop.png" alt="" />
+                <img src="/assets/Barbershop.png" alt="" />
               </div>
               <div className="col-8">
                 <div className="row">
@@ -106,7 +106,7 @@ function AppServices() {
           <div className="col-12 col-md-6">
             <div className="row my-5">
               <div className="col-4 d-flex justify-content-end p-4 align-items-start">
-                <img src="/public/Scalpmoisturizingimg.png" alt="" />
+                <img src="/assets/Scalpmoisturizingimg.png" alt="" />
               </div>
               <div className="col-8">
                 <div className="row">
@@ -126,7 +126,7 @@ function AppServices() {
           <div className="col-12 col-md-6">
             <div className="row my-5">
               <div className="col-4 d-flex justify-content-end p-4 align-items-start">
-                <img src="/public/Barbershop-1.png" alt="" />
+                <img src="/assets/Barbershop-1.png" alt="" />
               </div>
               <div className="col-8">
                 <div className="row">
