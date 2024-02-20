@@ -1,5 +1,5 @@
 .body{
-    background: linear-gradient(rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.3)), url("src/assets/HeroFooter.png");
+    background: linear-gradient(rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.3)), url("public/HeroFooter.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: right;

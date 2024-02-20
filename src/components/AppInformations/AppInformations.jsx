@@ -81,7 +81,7 @@ function AppInformations() {
           </div>
         </div>
         <div className="col-12 col-md-6 p-0">
-          <img src="src/assets/Image.png" alt="" className="img-fluid" />
+          <img src="public/Image.png" alt="" className="img-fluid" />
         </div>
       </div>
     </section>
