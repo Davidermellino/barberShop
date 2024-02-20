@@ -1,7 +1,7 @@
 @font-face {
   font-family: "Barlow";
   src: local("Barlow"),
-  url("src/fonts/Barlow-ExtraBold/barlow/Barlow-Bold.ttf") format("truetype");
+  url("/fonts/Barlow-ExtraBold/barlow/Barlow-Bold.ttf") format("truetype");
   font-weight: bold;
  }
 
