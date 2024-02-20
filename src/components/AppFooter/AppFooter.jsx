@@ -7,19 +7,9 @@ import { useState } from "react";
 
 function AppFooter() {
   const [buttonState, setButtonState] = useState("PRENOTA UN APPUNTAMENTO");
-
-  // const sendEmail = (e) => {
-  //   e.preventDefault();
-
-  //   try {
-  //     setButtonState("EMAIL INVIATA");
-  //   } catch (error) {
-  //     alert({ error });
-  //   }
-  // };
+  const [sentMessage, setSentMessage] = useState("");
 
   const formik = useFormik({
-    //we have created our initailValues object in a format EmailJS accepts
     initialValues: {
       fullName: "",
       object: "",
@@ -30,30 +20,23 @@ function AppFooter() {
     validationSchema: Yup.object({
       fullName: Yup.string().required("* Nome Obbligatorio"),
       object: Yup.string().required("* Oggetto della email obbligatorio"),
-      email: Yup.string()
-        .email("email non valida")
-        .required("* email obbligatoria"),
+      email: Yup.string().email("email non valida").required("* email obbligatoria"),
       message: Yup.string().required("* messaggio obbligatorio"),
       phone: Yup.string().required("* Numero di telefono obbligatorio"),
     }),
-    onSubmit: (values, { setSubmitting, resetForm }) => {
+    onSubmit: async (values, { setSubmitting, resetForm }) => {
       try {
         const serviceId = import.meta.env.VITE_SERVICE_ID;
         const templateId = import.meta.env.VITE_TEMPLATE_ID;
         const publicKey = import.meta.env.VITE_PUBLIC_KEY;
-        emailjs
-          .sendForm(serviceId, templateId, e.target, publicKey)
-          .then(() => {
-            sentMessage.classList.add("success");
-            sentMessage.innerHTML = CONTACT_ERROR.success;
-            setButtonState("Send Email");
-            setSubmitting(false);
-            resetForm();
-          });
-      } catch {
-        sentMessage.classList.add("error");
-        sentMessage.innerHTML = CONTACT_ERROR.error;
-        setButtonState("Send Email");
+        await emailjs.send(serviceId, templateId, values, publicKey);
+        setSentMessage("Email inviata con successo!");
+        setButtonState("PRENOTA UN APPUNTAMENTO");
+        resetForm();
+      } catch (error) {
+        setSentMessage("Si è verificato un errore durante l'invio dell'email.");
+        console.error("Errore durante l'invio dell'email:", error);
+      } finally {
         setSubmitting(false);
       }
     },
@@ -68,21 +51,12 @@ function AppFooter() {
           </div>
           <div className="row">
             <div className="p text-secondary">
-              Prenota il tuo appuntamento oggi stesso per goderti i nostri
-              servizi di grooming personalizzati direttamente a casa tua. Scegli
-              comodamente la data e l'orario che preferisci tramite la nostra
-              sezione di prenotazione online. Assicurati di garantirti il
-              trattamento di bellezza che meriti senza dover lasciare il comfort
-              del tuo ambiente domestico.
+              Prenota il tuo appuntamento oggi stesso per goderti i nostri servizi di grooming personalizzati direttamente a casa tua. Scegli comodamente la data e l'orario che preferisci tramite la nostra sezione di prenotazione online. Assicurati di garantirti il trattamento di bellezza che meriti senza dover lasciare il comfort del tuo ambiente domestico.
             </div>
           </div>
           <div className="row my-5">
             <div className="col-5 col-md-2">
-              <img
-                src="src/assets/phoneimg.png"
-                alt=""
-                className={`${style.image} bg-white p-3`}
-              />
+              <img src="src/assets/phoneimg.png" alt="" className={`${style.image} bg-white p-3`} />
             </div>
             <div className="col-7 col-md-10">
               <div className="row">
@@ -95,15 +69,11 @@ function AppFooter() {
           </div>
           <div className="row my-4">
             <div className="col-5 col-md-2">
-              <img
-                src="src/assets/Envelopeicon.png"
-                alt=""
-                className={`${style.image} bg-white p-3`}
-              />
+              <img src="src/assets/Envelopeicon.png" alt="" className={`${style.image} bg-white p-3`} />
             </div>
             <div className="col-7 col-md-10">
               <div className="row">
-                <h5 className="tx-primary">INVICACI UNA EMAIL</h5>
+                <h5 className="tx-primary">INVIA CI UNA EMAIL</h5>
               </div>
               <div className="row">
                 <p className="text-secondary">superbarber@barber.it</p>
@@ -112,13 +82,9 @@ function AppFooter() {
           </div>
         </div>
         <div className="col-12 col-md-6 p-4 ">
-          <form
-            action=""
-            className=" bg-white p-5 rounded-4"
-            onSubmit={formik.handleSubmit}
-          >
+          <form action="" className=" bg-white p-5 rounded-4" onSubmit={formik.handleSubmit}>
             <div className="row my-3">
-              <label htmlFor="fullName">NOME COMLPETO</label>
+              <label htmlFor="fullName">NOME COMPLETO</label>
               <input
                 name="fullName"
                 id="fullName"
@@ -126,13 +92,7 @@ function AppFooter() {
                 onChange={formik.handleChange}
                 value={formik.values.fullName}
               />
-              <div
-                className={`expandable text-danger ${
-                  formik.touched.fullName && formik.errors.fullName
-                    ? "show"
-                    : ""
-                }`}
-              >
+              <div className={`expandable text-danger ${formik.touched.fullName && formik.errors.fullName ? "show" : ""}`}>
                 {formik.errors.fullName}
               </div>
             </div>
@@ -145,11 +105,7 @@ function AppFooter() {
                 onChange={formik.handleChange}
                 value={formik.values.object}
               />
-              <div
-                className={`expandable text-danger ${
-                  formik.touched.object && formik.errors.object ? "show" : ""
-                }`}
-              >
+              <div className={`expandable text-danger ${formik.touched.object && formik.errors.object ? "show" : ""}`}>
                 {formik.errors.object}
               </div>
             </div>
@@ -165,11 +121,7 @@ function AppFooter() {
                   onChange={formik.handleChange}
                   value={formik.values.phone}
                 />
-                <div
-                  className={`expandable text-danger ${
-                    formik.touched.phone && formik.errors.phone ? "show" : ""
-                  }`}
-                >
+                <div className={`expandable text-danger ${formik.touched.phone && formik.errors.phone ? "show" : ""}`}>
                   {formik.errors.phone}
                 </div>
               </div>
@@ -184,11 +136,7 @@ function AppFooter() {
                   onChange={formik.handleChange}
                   value={formik.values.email}
                 />
-                <div
-                  className={`expandable text-danger ${
-                    formik.touched.email && formik.errors.email ? "show" : ""
-                  }`}
-                >
+                <div className={`expandable text-danger ${formik.touched.email && formik.errors.email ? "show" : ""}`}>
                   {formik.errors.email}
                 </div>
               </div>
@@ -199,19 +147,22 @@ function AppFooter() {
                 id="message"
                 cols="30"
                 rows="10"
+                onChange={formik.handleChange}
+                value={formik.values.message}
               ></textarea>
-              <div
-                className={`expandable text-danger ${
-                  formik.touched.message && formik.errors.message ? "show" : ""
-                }`}
-              >
+              <div className={`expandable text-danger ${formik.touched.message && formik.errors.message ? "show" : ""}`}>
                 {formik.errors.message}
               </div>
             </div>
             <div className="row">
-              <button className="button1">PRENOTA UN APPUNTAMENTO</button>
+              <button type="submit" className="button1">
+                {buttonState}
+              </button>
             </div>
           </form>
+          <div className="row">
+            {sentMessage && <p className={sentMessage.includes("success") ? "success" : "error"}>{sentMessage}</p>}
+          </div>
         </div>
       </div>
     </section>
