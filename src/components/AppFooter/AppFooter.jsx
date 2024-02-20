@@ -64,7 +64,7 @@ function AppFooter() {
           <div className="row my-5">
             <div className="col-5 col-md-2">
               <img
-                src="src/assets/phoneimg.png"
+                src="../../../public/phoneimg.png"
                 alt=""
                 className={`${style.image} bg-white p-3`}
               />
@@ -81,7 +81,7 @@ function AppFooter() {
           <div className="row my-4">
             <div className="col-5 col-md-2">
               <img
-                src="src/assets/Envelopeicon.png"
+                src="../../../public/Envelopeicon.png"
                 alt=""
                 className={`${style.image} bg-white p-3`}
               />

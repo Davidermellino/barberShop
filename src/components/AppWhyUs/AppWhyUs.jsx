@@ -18,7 +18,7 @@ function AppWhyUs() {
       <ScrollAnimation className="row mt-5" animateIn="fadeInUp">
             <div  className="col-12 col-md-4 d-flex flex-column align-items-center">
                 <div className="row justify-content-center">
-                    <img src="public/licensed_icon.png" alt="licensed" />
+                    <img src="../../../public/licensed_icon.png" alt="licensed" />
                 </div>
                 <div className="row">
                     <h4>CERTIFICATI</h4>
@@ -30,7 +30,7 @@ function AppWhyUs() {
             </div>
             <div  className="col-12 col-md-4 d-flex flex-column align-items-center">
                 <div className="row justify-content-center">
-                    <img src="public/masters_icon.png" alt="master" />
+                    <img src="../../../public/masters_icon.png" alt="master" />
                 </div>
                 <div className="row">
                     <h4>ESPERTI</h4>
@@ -42,7 +42,7 @@ function AppWhyUs() {
             </div>
             <div className="col-12 col-md-4 d-flex flex-column align-items-center">
                 <div className="row justify-content-center">
-                    <img src="public/trusted_icon.png" alt="affidabilità" />
+                    <img src="../../../public/trusted_icon.png" alt="affidabilità" />
                 </div>
                 <div className="row">
                     <h4>AFFIDABILI</h4>

@@ -2,10 +2,9 @@ import style from "./AppReviews.module.css";
 import { FaStar } from "react-icons/fa6";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import { Autoplay, Pagination, Navigation } from 'swiper/modules';
-
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import { Autoplay, Pagination, Navigation } from "swiper/modules";
 
 function AppReviews() {
   return (
@@ -17,7 +16,7 @@ function AppReviews() {
         <div className="col-12 col-md-4 d-flex flex-column alignitems-center order-2 order-md-1 ">
           <div className="row">
             <img
-              src="src/assets/icon-google.png"
+              src="../../../public/icon-google.png"
               alt="google icon"
               className={`${style.logo}`}
             />
@@ -64,7 +63,7 @@ function AppReviews() {
             <div className={`row justify-content-center align-items-center`}>
               <div className={`${style.profileContainer}`}>
                 <img
-                  src="src/assets/Image_Thumbnail.png"
+                  src="../../../public/Image_Thumbnail.png"
                   alt=""
                   className={`${style.profile}`}
                 />
@@ -106,7 +105,7 @@ function AppReviews() {
             <div className={`row justify-content-center align-items-center`}>
               <div className={`${style.profileContainer}`}>
                 <img
-                  src="src/assets/carlo_conti.jpg"
+                  src="../../../public/carlo_conti.jpg"
                   alt=""
                   className={`${style.profile}`}
                 />
@@ -149,7 +148,7 @@ function AppReviews() {
             <div className={`row justify-content-center align-items-center`}>
               <div className={`${style.profileContainer}`}>
                 <img
-                  src="src/assets/SaraMarras.jpg"
+                  src="../../../public/SaraMarras.jpg"
                   alt=""
                   className={`${style.profile}`}
                 />
@@ -192,7 +191,7 @@ function AppReviews() {
             <div className={`row justify-content-center align-items-center`}>
               <div className={`${style.profileContainer}`}>
                 <img
-                  src="src/assets/kratos.jpg"
+                  src="../../../public/kratos.jpg"
                   alt=""
                   className={`${style.profile}`}
                 />
@@ -235,7 +234,7 @@ function AppReviews() {
         <div className="col-12 col-md-4 d-flex flex-column alignitems-center order-3 mt-5 mt-md-0">
           <div className="row">
             <img
-              src="src/assets/icon-tripadvisor.png"
+              src="../../../public/icon-tripadvisor.png"
               alt="google icon"
               className={`${style.logo}`}
             />
