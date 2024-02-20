@@ -16,7 +16,7 @@ function AppReviews() {
         <div className="col-12 col-md-4 d-flex flex-column alignitems-center order-2 order-md-1 ">
           <div className="row">
             <img
-              src="../../../public/icon-google.png"
+              src="/assets/icon-google.png"
               alt="google icon"
               className={`${style.logo}`}
             />
@@ -63,7 +63,7 @@ function AppReviews() {
             <div className={`row justify-content-center align-items-center`}>
               <div className={`${style.profileContainer}`}>
                 <img
-                  src="../../../public/Image_Thumbnail.png"
+                  src="/assets/Image_Thumbnail.png"
                   alt=""
                   className={`${style.profile}`}
                 />
@@ -105,7 +105,7 @@ function AppReviews() {
             <div className={`row justify-content-center align-items-center`}>
               <div className={`${style.profileContainer}`}>
                 <img
-                  src="../../../public/carlo_conti.jpg"
+                  src="/assets/carlo_conti.jpg"
                   alt=""
                   className={`${style.profile}`}
                 />
@@ -148,7 +148,7 @@ function AppReviews() {
             <div className={`row justify-content-center align-items-center`}>
               <div className={`${style.profileContainer}`}>
                 <img
-                  src="../../../public/SaraMarras.jpg"
+                  src="/assets/SaraMarras.jpg"
                   alt=""
                   className={`${style.profile}`}
                 />
@@ -191,7 +191,7 @@ function AppReviews() {
             <div className={`row justify-content-center align-items-center`}>
               <div className={`${style.profileContainer}`}>
                 <img
-                  src="../../../public/kratos.jpg"
+                  src="/assets/kratos.jpg"
                   alt=""
                   className={`${style.profile}`}
                 />
@@ -234,7 +234,7 @@ function AppReviews() {
         <div className="col-12 col-md-4 d-flex flex-column alignitems-center order-3 mt-5 mt-md-0">
           <div className="row">
             <img
-              src="../../../public/icon-tripadvisor.png"
+              src="/assets/icon-tripadvisor.png"
               alt="google icon"
               className={`${style.logo}`}
             />

@@ -49,7 +49,7 @@ function AppHeader() {
           <div className="col-12 col-md-4 bg-white pt-5">
             <div className="row justify-content-center">
               <img
-                src="../../../public/address_img.png"
+                src="/assets/address_img.png"
                 alt="indirizzoImg"
                 className={`${style.img}`}
               />
@@ -67,7 +67,7 @@ function AppHeader() {
           <div className="col-12 col-md-4 bg-white pt-5">
             <div className="row justify-content-center">
               <img
-                src="../../../public/phone_img.png"
+                src="/assets/phone_img.png"
                 alt="TelefonoImg"
                 className={`${style.img}`}
               />
@@ -83,7 +83,7 @@ function AppHeader() {
           <div className="col-12 col-md-4 bg-white pt-5">
             <div className="row justify-content-center">
               <img
-                src="../../../public/hours_img.png"
+                src="/assets/hours_img.png"
                 alt="Orologio"
                 className={`${style.img}`}
               />
